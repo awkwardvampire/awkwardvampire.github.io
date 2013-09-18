@@ -3,7 +3,7 @@ pygments: true
 permalink: /:title
 rdiscount:
   extensions: [smart]
-title : Victor
+title : VICTOR
 tagline: "Awkward Vampire of Awkward"
 production_url : http://awkwardvampire.github.com
 description: "Victor wants all the awkward... every last drop of it."

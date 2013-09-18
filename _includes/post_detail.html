@@ -1,24 +1,35 @@
 
 
-<div id="prev" style="float: left; margin-top: 200px; padding-left:5%">
-	{% if post.title == 1 %}
-		<a href="/{{post.title}}">&laquo; Prev</a>
-	{% else %}
-		<a href="/{{post.title | minus: 1}}">&laquo; Prev</a>
-	{% endif %}
-</div>
-<div id="next" style="float: right; margin-top: 200px; padding-right: 5%">
-	{% if post.title == site.posts.first.title %}
-		<a href="/{{post.title}}">Next  &raquo; </a>
-	{% else %}
-		<a href="/{{post.title | plus: 1}}">Next &raquo; </a>
-	{% endif %}
-</div>
+
+
 
 <section class="content">
-  <div style="text-align: center; margin-top: 100px;">
+  <div style="text-align: center; margin-top: 80px;">
 	  {{ content }}
   </div>
+ 
+</section>
+
+<section class="content" id="prev-title-next" style="font-size: 2em; padding:0; padding-left: 16%; padding-right:16%; text-align: center;">
+	<div id="prev" style="float: left;  ">
+		{% if post.title == 1 %}
+			<a href="/{{post.title}}">&lt;</a>
+		{% else %}
+			<a href="/{{post.title | minus: 1}}">&lt;</a>
+		{% endif %}
+	</div>
+	
+	<div id="next" style="float: right;">
+		{% if post.title == site.posts.first.title %}
+			<a href="/{{post.title}}">&gt;</a>
+		{% else %}
+			<a href="/{{post.title | plus: 1}}">&gt;</a>
+		{% endif %}
+	</div>
+	<div style="text-align: center;" >
+  		{{post.title}}
+  	</div>
+
 </section>
 
 
