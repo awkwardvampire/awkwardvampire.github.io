@@ -67,3 +67,8 @@ a:hover {
 img.post {
 	border: .2em solid black;
 }
+
+section.content img {
+	max-width: none;
+	max-height: none;
+}
